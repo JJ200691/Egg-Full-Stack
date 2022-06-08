@@ -1,0 +1,13 @@
+*Crean una carpeta donde quieren que se guarde el proyecto
+*Click Derecho: Git Bash Here, y se les abrirá la consola en esa ubicacion
+--En la consola--
+Para inicializar la carpeta como un repositorio de git.
+*git init 
+Para enlazarlo con el repositorio remoto (de git Hub)
+*git remote add origin https://github.com/FOMonti/ProyectoFinal.git
+---
+Para bajar los ultimos cambios...
+(Deben estar parados en Master, en la consola les deberia de aparece el nombre de usuario mas un codigo
+seguido de un codigo y la ubicacion del repositorio local, a la derecha de eso, la rama en color verde "adsad@asda (master)")
+git pull origin master
+y se les bajara todos los cambios de master, la rama master deberia ser siempre funcional

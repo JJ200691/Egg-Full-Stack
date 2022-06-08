@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.com.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head th:replace="layout/layout::head">
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<header th:replace="layout/navbar::navbar-l"></header>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class=" col-4">
+            <form th:action="@{/usuario/registro}" th:object="${usuario}" method="post" enctype="multipart/form-data">
+                <h1>Iniciar Sesion</h1>
+                <div>
+                    <input type="text" th:field="*{username}" class="form-control" placeholder="Ingrese un username"/>
+                </div>
+                <br>
+                <div>
+                    <input type="password" th:field="*{password}" class="form-control"
+                           placeholder="Ingrese una contraseña"/>
+                </div>
+                <br>
+                <div>
+                    <button type="submit" class="form-control btn btn-secondary">Registrarme</button>
+                </div>
+                <!--                <div class="alert alert-success text-center" th:if="${mensaje}" th:text="${mensaje}"></div>-->
+            </form>
+        </div>
+    </div>
+</div>
+<footer th:replace="layout/layout::footer"></footer>
+</body>
+</html>

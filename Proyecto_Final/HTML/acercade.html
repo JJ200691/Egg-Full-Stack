@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/acercade.css">
+
+</head>
+
+<body>
+
+    <header th:fragment="navbar-l">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <!-- icono -->
+                <img class="icono" src="../Imágenes/icono1.ico" alt="logo">
+                <!-- icono -->
+                <a class="navbar-brand" href="#">EP-MOVIL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/tienda/productos}">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Repará</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Preguntas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/">Carrito</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button id="buscar" class="btn btn-outline-light" type="submit"
+                            style="margin-right:10px">Buscar</button>
+                    </form>
+                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                        <a th:href="@{/usuario/logear}">
+                            <button class="btn btn-outline-light">Iniciar</button>
+                        </a>
+                        <a th:href="@{/usuario/registrar}">
+                            <button id="crear" class="btn btn-outline-light">Crear</button>
+                        </a>
+                    </div>
+                </div>
+
+                <a th:href="@{/usuario/carrito}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-cart3 btn-outline-light" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+                <div class="nombre_usuario">
+                    <p>@nombre_usuario</p>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row align-items-start">
+                    <h1>Acerca de Nosotros</h1>
+                    <div id="text-sobre-nosotros" class="col-12 col-sm-12 col-md-4 col-lg-6 ">
+
+                        <p> Somos Ep-Movil, una empresa que se dedica a brindar soluciones tecnológicas en cortos
+                            períodos de tiempo, nuestra misión es resolver tu problemática en tiempo record para que
+                            vuelvas a utilizar tu dispositivo
+                            nuevamente y puedas continuar con tu tarea laboral o recreativa sin perder muchos días
+                            esperando un presupuesto/arreglo. Si quisieras acceder a un dispositivo también contamos con
+                            una tienda virtual propia donde podés visualizar todos los equipos multimarca que trabajamos
+                            y las facilidades de compra para poder hacerse con los mismos. No dudes en hacer tu consulta
+                            en la seccion "contáctenos", a la brevedad un asesor se
+                            comunicará con vos para evaluar tu situación y brindarte una respuesta rápida.
+                            Ep-Móvil tecnología en marcha...
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-8 col-lg-6" style="text-align-last: center;">
+                        <img id="imagen-acerda-de" src="../Imágenes/banner1.jpg" alt="sobreNosotros" width="500"
+                            height="350">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+            </script>
+
+</body>
+
+</html>

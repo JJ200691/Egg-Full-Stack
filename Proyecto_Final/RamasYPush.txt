@@ -1,0 +1,29 @@
+Cada Rama debe ser creada en orden jerárquico; primero viene master, luego develop, luego nuestras ramas a la par.
+Como hacemos esto?, creando las ramas en el punto en el que deben ser creadas, la develop se crea desde master
+y las nuestras desde develop
+Si siguieron los pasos anteriores, deben estar parados en master.
+Primero debemos traernos las ramas remotas si no las trajo el pull que hicieron para bajar los cambios,
+ademas les traera todas las ramas remotas existentes (tecnicamente solo deberian tener develop, master y la de ustedes
+pero para lo que estamos trabajando es indiferente)
+$git fetch
+
+Para movernos a develop y crear la rama desde ahi:
+$git checkout develop
+
+Para crear la rama local:
+$git branch nombreRama 		(su nombre)
+Y ya deberian tener la rama creada
+En este punto, deben moverse a su rama si es que no estan ahi:
+$git checkout nombreRama
+
+Luego hacen un cambio en el proyecto
+$git status (para ver las diferencias del repo local y remoto)
+$git add . (para agregar todos los cambios)
+$git commit -m "Comentario" (entre "" siempre)
+$git push origin nombreRama
+
+Y ya estaria la rama remota subida... 
+Aclaraciones
+*se puede subir la remota con solo hacer el push, solo que a veces no lo toma, pueden probarlo y verificar 
+desde github si ya les aparece.
+

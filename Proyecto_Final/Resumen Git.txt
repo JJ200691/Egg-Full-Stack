@@ -1,0 +1,18 @@
+
+---Siempre bajar actualizacion de develop, pull----
+
+$ git status
+$ git add .
+$ git commit -m "MENSAJE DE COMMIT : indicar tarea realizada"
+$ git push origin nombreRama (su nombre) --Guardando cambios en Local--
+---Push hacia el repositorio Remoto----
+
+
+---Merge------
+$ git checkout develop (Siempre develop, va a ser el repositorio de testeo)
+$ git pull origin develop (REGLA DE ORO, bajar los cambios antes de subir, es decir, pull antes de push)
+$ git merge nombreRama
+$ git add . (añadiendo los cambios)
+$ git commit -m "MENSAJE DE COMMIT: indicar motivo de merge" ()
+$ git push origin develop
+$ git status
